@@ -5,3 +5,4 @@
 04 - Angular - Introdução. <br>
 05 - Angular - Interpolação, Diretivas e Binding. <br>
 06 - DotNet 5 - Múltiplas Camadas. <br>
+07 - Angular - Organizar, Rota, Alerta e + <br>
