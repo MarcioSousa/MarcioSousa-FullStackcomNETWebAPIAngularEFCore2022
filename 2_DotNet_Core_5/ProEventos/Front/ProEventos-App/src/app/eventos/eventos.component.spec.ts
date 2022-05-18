@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { EventosComponent } from './eventos.component';
 
 describe('EventosComponent', () => {
@@ -22,4 +21,5 @@ describe('EventosComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
 });
