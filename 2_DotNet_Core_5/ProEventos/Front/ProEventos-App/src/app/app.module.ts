@@ -21,6 +21,7 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ContatosComponent } from './componentes/contatos/contatos.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 import { PerfilComponent } from './componentes/perfil/perfil.component';
+import { TituloComponent } from './shared/titulo/titulo.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { PerfilComponent } from './componentes/perfil/perfil.component';
     ContatosComponent,
     DashboardComponent,
     PerfilComponent,
+    TituloComponent,
     NavComponent,
     DateTimeFormatPipe
    ],
