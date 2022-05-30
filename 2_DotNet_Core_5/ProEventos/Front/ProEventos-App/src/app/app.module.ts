@@ -4,8 +4,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EventosComponent } from './eventos/eventos.component';
-import { PalestrantesComponent } from './palestrantes/palestrantes.component';
+import { EventosComponent } from './componentes/eventos/eventos.component';
+import { PalestrantesComponent } from './componentes/palestrantes/palestrantes.component';
 import { NavComponent } from './nav/nav.component';
 import { DateTimeFormatPipe } from './helpers/DateTimeFormat.pipe';
 import { HttpClientModule } from '@angular/common/http'
@@ -18,12 +18,18 @@ import { FormsModule } from '@angular/forms';
 import { EventoService } from './services/evento.service';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ContatosComponent } from './componentes/contatos/contatos.component';
+import { DashboardComponent } from './componentes/dashboard/dashboard.component';
+import { PerfilComponent } from './componentes/perfil/perfil.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EventosComponent,
     PalestrantesComponent,
+    ContatosComponent,
+    DashboardComponent,
+    PerfilComponent,
     NavComponent,
     DateTimeFormatPipe
    ],
