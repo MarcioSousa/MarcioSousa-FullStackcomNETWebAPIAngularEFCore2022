@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EventosComponent } from './componentes/eventos/eventos.component';
 import { PalestrantesComponent } from './componentes/palestrantes/palestrantes.component';
-import { NavComponent } from './nav/nav.component';
+import { NavComponent } from './shared/nav/nav.component';
 import { DateTimeFormatPipe } from './helpers/DateTimeFormat.pipe';
 import { HttpClientModule } from '@angular/common/http'
 import { NgxSpinnerModule } from 'ngx-spinner';
