@@ -6,3 +6,4 @@
 05 - Angular - Interpolação, Diretivas e Binding. <br>
 06 - DotNet 5 - Múltiplas Camadas. <br>
 07 - Angular - Organizar, Rota, Alerta e + <br>
+08 - Angular - Reactive Forms e Mudança de Layout. <br>

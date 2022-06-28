@@ -22,6 +22,8 @@ import { ContatosComponent } from './componentes/contatos/contatos.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 import { PerfilComponent } from './componentes/perfil/perfil.component';
 import { TituloComponent } from './shared/titulo/titulo.component';
+import { EventoDetalheComponent } from './componentes/eventos/evento-detalhe/evento-detalhe.component';
+import { EventoListaComponent } from './componentes/eventos/evento-lista/evento-lista.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { TituloComponent } from './shared/titulo/titulo.component';
     PerfilComponent,
     TituloComponent,
     NavComponent,
-    DateTimeFormatPipe
+    DateTimeFormatPipe,
+    EventoDetalheComponent,
+    EventoListaComponent
    ],
   imports: [
     BrowserModule,
