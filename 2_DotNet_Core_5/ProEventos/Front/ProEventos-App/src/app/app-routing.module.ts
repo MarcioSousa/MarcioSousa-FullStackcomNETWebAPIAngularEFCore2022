@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ContatosComponent } from './componentes/contatos/contatos.component';
-import { DashboardComponent } from './componentes/dashboard/dashboard.component';
-import { EventoDetalheComponent } from './componentes/eventos/evento-detalhe/evento-detalhe.component';
-import { EventoListaComponent } from './componentes/eventos/evento-lista/evento-lista.component';
-import { EventosComponent } from './componentes/eventos/eventos.component';
-import { PalestrantesComponent } from './componentes/palestrantes/palestrantes.component';
-import { PerfilComponent } from './componentes/perfil/perfil.component';
+import { ContatosComponent } from './components/contatos/contatos.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { EventoDetalheComponent } from './components/eventos/evento-detalhe/evento-detalhe.component';
+import { EventoListaComponent } from './components/eventos/evento-lista/evento-lista.component';
+import { EventosComponent } from './components/eventos/eventos.component';
+import { PalestrantesComponent } from './components/palestrantes/palestrantes.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
 
 const routes: Routes = [
   {
