@@ -8,6 +8,7 @@ namespace ProEscolas.API.Models
         public int NCheque { get; set; }
         public string PreData { get; set; }
         public Matricula Matricula { get; set; }
+        public int MatriculaId { get; set; }
         public Avista(double valor, int agencia, int nCheque, string preData)
         {
             Valor = valor;

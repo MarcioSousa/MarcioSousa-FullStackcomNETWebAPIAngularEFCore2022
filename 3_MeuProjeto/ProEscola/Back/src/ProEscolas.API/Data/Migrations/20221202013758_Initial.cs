@@ -143,8 +143,8 @@ namespace ProEscolas.API.Data.Migrations
                     QtdeVagas = table.Column<int>(type: "int", nullable: false),
                     Observacoes = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    InstrutorId = table.Column<int>(type: "int", nullable: true),
-                    CursoId = table.Column<int>(type: "int", nullable: true)
+                    InstrutorId = table.Column<int>(type: "int", nullable: false),
+                    CursoId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -154,13 +154,13 @@ namespace ProEscolas.API.Data.Migrations
                         column: x => x.CursoId,
                         principalTable: "Cursos",
                         principalColumn: "CursoId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Turmas_Instrutores_InstrutorId",
                         column: x => x.InstrutorId,
                         principalTable: "Instrutores",
                         principalColumn: "InstrutorId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -170,12 +170,12 @@ namespace ProEscolas.API.Data.Migrations
                 {
                     MatriculaId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    AlunoId = table.Column<int>(type: "int", nullable: false),
                     Data = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     QtdeFaltas = table.Column<int>(type: "int", nullable: false),
                     Nota = table.Column<double>(type: "double", nullable: false),
-                    TurmaId = table.Column<int>(type: "int", nullable: true)
+                    AlunoId = table.Column<int>(type: "int", nullable: false),
+                    TurmaId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -191,7 +191,7 @@ namespace ProEscolas.API.Data.Migrations
                         column: x => x.TurmaId,
                         principalTable: "Turmas",
                         principalColumn: "TurmaId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -206,7 +206,7 @@ namespace ProEscolas.API.Data.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     QtdeMensalidade = table.Column<int>(type: "int", nullable: false),
                     TaxaJuros = table.Column<double>(type: "double", nullable: false),
-                    MatriculaId = table.Column<int>(type: "int", nullable: true)
+                    MatriculaId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -216,7 +216,7 @@ namespace ProEscolas.API.Data.Migrations
                         column: x => x.MatriculaId,
                         principalTable: "Matriculas",
                         principalColumn: "MatriculaId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -231,7 +231,7 @@ namespace ProEscolas.API.Data.Migrations
                     NCheque = table.Column<int>(type: "int", nullable: false),
                     PreData = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    MatriculaId = table.Column<int>(type: "int", nullable: true)
+                    MatriculaId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -241,9 +241,56 @@ namespace ProEscolas.API.Data.Migrations
                         column: x => x.MatriculaId,
                         principalTable: "Matriculas",
                         principalColumn: "MatriculaId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.InsertData(
+                table: "Alunos",
+                columns: new[] { "AlunoId", "Bairro", "Celular", "Cep", "Cidade", "Cpf", "DataNasc", "Email", "Endereco", "Escolaridade", "Estado", "EstadoCivil", "Nome", "Numero", "Rg", "Sexo", "Telefone" },
+                values: new object[,]
+                {
+                    { 1, "Centro", "11922211111", "11222-111", "Itu", "123.456.789-22", "01/09/2000", "teste2@teste.com", "Rua AA", "Ensino Médio", "SP", "Casado", "João", 17, "11.111.222-22", "M", "5555511111" },
+                    { 2, "Centro", "33911111111", "31111-111", "Itu", "012.645.201-77", "01/01/1990", "teste3@teste.com", "Rua M", "Ensino Superior", "RJ", "Solteiro", "Marcio", 15, "33.111.111-11", "M", "3311111111" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Cursos",
+                columns: new[] { "CursoId", "CargaHoraria", "DataVigencia", "Nome", "Programa", "Sigla", "Valor", "ValorHoraInstrutor" },
+                values: new object[,]
+                {
+                    { 1, 20, "02/03/2022", "Analista", "Planilhas", "AAA", 850.29999999999995, 125.3 },
+                    { 2, 30, "22/10/2022", "Junior", "Residêncial", "BBC", 743.20000000000005, 100.59999999999999 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Instrutores",
+                columns: new[] { "InstrutorId", "AreaAtuacao", "Bairro", "Celular", "Cep", "Cidade", "Cpf", "DataNasc", "Email", "Endereco", "Estado", "EstadoCivil", "Formacao", "Nome", "Numero", "Rg", "Sexo", "Telefone" },
+                values: new object[,]
+                {
+                    { 1, "Administração", "Centro", "11911111111", "11111-111", "Sorocaba", "1", "01/01/2000", "teste1@teste.com", "Rua J", "RJ", "Solteiro", "Ensino Médio", "Roberto", 10, "11.111.111-11", "M", "1111111111" },
+                    { 2, "Eletrecista", "Centro", "22911111111", "22222-111", "Jundiaí", "2", "01/01/2001", "teste2@teste.com", "Rua A", "SP", "Solteiro", "Ensino Fundamental", "Ana", 101, "11.111.111-22", "F", "2211111111" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Turmas",
+                columns: new[] { "TurmaId", "CursoId", "DataInicio", "DataTermino", "Descricao", "InstrutorId", "Observacoes", "Periodo", "QtdeVagas", "SiglaTurma" },
+                values: new object[] { 1, 1, "02/02/2022", "02/10/2022", "Analistas de Sistemas", 1, "Terá um mês de férias.", "Manhã", 20, "AA10" });
+
+            migrationBuilder.InsertData(
+                table: "Turmas",
+                columns: new[] { "TurmaId", "CursoId", "DataInicio", "DataTermino", "Descricao", "InstrutorId", "Observacoes", "Periodo", "QtdeVagas", "SiglaTurma" },
+                values: new object[] { 2, 2, "02/03/2022", "02/06/2022", "Bolos e Confeitos", 2, "Não terá um mês de férias.", "Tarde", 5, "BB01" });
+
+            migrationBuilder.InsertData(
+                table: "Matriculas",
+                columns: new[] { "MatriculaId", "AlunoId", "Data", "Nota", "QtdeFaltas", "TurmaId" },
+                values: new object[] { 1, 2, "01/12/2022 22:37:57", 7.7999999999999998, 7, 1 });
+
+            migrationBuilder.InsertData(
+                table: "Aprazos",
+                columns: new[] { "AprazoId", "DtVencimento", "MatriculaId", "QtdeMensalidade", "TaxaJuros", "Valor" },
+                values: new object[] { 1, "05/05/2022", 1, 3, 5.5999999999999996, 322.60000000000002 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Aprazos_MatriculaId",

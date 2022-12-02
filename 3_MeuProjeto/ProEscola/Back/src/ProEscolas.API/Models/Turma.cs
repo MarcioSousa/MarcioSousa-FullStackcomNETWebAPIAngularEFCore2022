@@ -14,7 +14,9 @@ namespace ProEscolas.API.Models
         public string Observacoes { get; set; }
         public ICollection<Matricula> Matriculas { get; set; }
         public Instrutor Instrutor { get; set; }
+        public int InstrutorId { get; set; }
         public Curso Curso { get; set; }
+        public int CursoId { get; set; }
 
         public Turma(string siglaTurma, string descricao)
         {
