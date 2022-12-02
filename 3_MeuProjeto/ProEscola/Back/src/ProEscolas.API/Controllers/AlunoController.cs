@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ProEscolas.API.Data;
 using ProEscolas.API.Models;
 
@@ -19,13 +20,16 @@ namespace ProEscolas.API.Controllers
         [HttpGet]
         public IEnumerable<Aluno> Get()
         {
-            return context.Alunos;
+            return context.Alunos
+                .Include(m => m.Matricula);
         }
 
         [HttpGet("{AlunoId}")]
         public Aluno GetById(int AlunoId)
         {
-            return context.Alunos.FirstOrDefault(aluno => aluno.AlunoId == AlunoId );        
+            return context.Alunos
+                .Include(m => m.Matricula)
+                .FirstOrDefault(aluno => aluno.AlunoId == AlunoId);        
         }
 
         [HttpPost]

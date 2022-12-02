@@ -35,6 +35,12 @@ namespace ProEscolas.API
 
 
             services.AddControllers();
+
+            //Resolvendo erro de ciclo utilizando NewtonsoftJson da microsoft
+            services.AddControllers()
+                .AddNewtonsoftJson(option => 
+                    option.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProEscolas.API", Version = "v1" });

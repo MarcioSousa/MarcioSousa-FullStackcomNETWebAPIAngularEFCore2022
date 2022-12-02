@@ -12,7 +12,7 @@ namespace ProEscolas.API.Models
         public string Periodo { get; set; }
         public int QtdeVagas { get; set; }
         public string Observacoes { get; set; }
-        public ICollection<Matricula> Matriculas { get; set; }
+        public virtual ICollection<Matricula> Matriculas { get; set; }
         public Instrutor Instrutor { get; set; }
         public int InstrutorId { get; set; }
         public Curso Curso { get; set; }

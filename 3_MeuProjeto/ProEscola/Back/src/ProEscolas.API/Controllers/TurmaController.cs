@@ -1,25 +1,36 @@
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using ProEscolas.API.Data;
+using ProEscolas.API.Models;
 
 namespace ProEscolas.API.Controllers
 {    
     [ApiController]
     [Route("api/[controller]")]
     public class TurmaController : ControllerBase
-    {
-        public TurmaController(){
-
+    {  
+        private readonly DataContext context;
+        public TurmaController(DataContext context){
+            this.context = context;
         }
 
         [HttpGet]
-        public string Get()
+        public IEnumerable<Turma> Get()
         {
-            return "value";
+            return context.Turmas
+                .Include(c => c.Curso)
+                .Include(i => i.Instrutor);
         }
 
         [HttpGet("{TurmaId}")]
-        public string Get(int TurmaId)
+        public Turma GetById(int TurmaId)
         {
-            return "value";
+            return context.Turmas
+                .Include(c => c.Curso)
+                .Include(i => i.Instrutor)
+                .FirstOrDefault(turma => turma.TurmaId == TurmaId);
         }
 
         [HttpPost]

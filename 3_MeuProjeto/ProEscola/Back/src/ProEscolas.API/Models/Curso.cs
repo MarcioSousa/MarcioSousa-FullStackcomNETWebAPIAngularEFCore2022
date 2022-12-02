@@ -12,7 +12,7 @@ namespace ProEscolas.API.Models
         public string DataVigencia { get; set; }
         public double ValorHoraInstrutor { get; set; }
         public string Programa { get; set; }
-        public ICollection<Turma> Turmas { get; set; }
+        public virtual ICollection<Turma> Turmas { get; set; }
 
         public Curso(string sigla, string nome)
         {

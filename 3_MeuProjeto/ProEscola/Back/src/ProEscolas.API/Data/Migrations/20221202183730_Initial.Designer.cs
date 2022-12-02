@@ -8,7 +8,7 @@ using ProEscolas.API.Data;
 namespace ProEscolas.API.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221202013758_Initial")]
+    [Migration("20221202183730_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -152,6 +152,15 @@ namespace ProEscolas.API.Data.Migrations
                             AprazoId = 1,
                             DtVencimento = "05/05/2022",
                             MatriculaId = 1,
+                            QtdeMensalidade = 3,
+                            TaxaJuros = 5.5999999999999996,
+                            Valor = 322.60000000000002
+                        },
+                        new
+                        {
+                            AprazoId = 2,
+                            DtVencimento = "05/05/2022",
+                            MatriculaId = 2,
                             QtdeMensalidade = 3,
                             TaxaJuros = 5.5999999999999996,
                             Valor = 322.60000000000002
@@ -383,10 +392,19 @@ namespace ProEscolas.API.Data.Migrations
                         {
                             MatriculaId = 1,
                             AlunoId = 2,
-                            Data = "01/12/2022 22:37:57",
+                            Data = "02/12/2022 15:37:29",
                             Nota = 7.7999999999999998,
                             QtdeFaltas = 7,
                             TurmaId = 1
+                        },
+                        new
+                        {
+                            MatriculaId = 2,
+                            AlunoId = 1,
+                            Data = "02/12/2022 15:37:29",
+                            Nota = 2.6000000000000001,
+                            QtdeFaltas = 3,
+                            TurmaId = 2
                         });
                 });
 

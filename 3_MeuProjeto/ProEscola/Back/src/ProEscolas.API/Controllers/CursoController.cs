@@ -1,25 +1,30 @@
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using ProEscolas.API.Data;
+using ProEscolas.API.Models;
 
 namespace ProEscolas.API.Controllers
 {   
     [ApiController]
     [Route("api/[controller]")]
     public class CursoController : ControllerBase
-    {
-        public CursoController(){
-
+    {  
+        private readonly DataContext context;
+        public CursoController(DataContext context){
+            this.context = context;
         }
 
         [HttpGet]
-        public string Get()
+        public IEnumerable<Curso> Get()
         {
-            return "value";
+            return context.Cursos;
         }
 
         [HttpGet("{CursoId}")]
-        public string Get(int CursoId)
+        public Curso GetById(int CursoId)
         {
-            return "value";
+            return context.Cursos.FirstOrDefault(curso => curso.CursoId == CursoId);
         }
 
         [HttpPost]

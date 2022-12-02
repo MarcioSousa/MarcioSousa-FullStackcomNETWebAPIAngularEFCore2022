@@ -152,19 +152,32 @@ namespace ProEscolas.API.Data
                 QtdeFaltas = 7,
                 AlunoId = aluno2.AlunoId
             };
+            Matricula matricula2 = new(DateTime.Now.ToString())
+            {
+                MatriculaId = 2,
+                TurmaId = turma2.TurmaId,
+                Nota = 2.6,
+                QtdeFaltas = 3,
+                AlunoId = aluno1.AlunoId
+            };
 
             Aprazo aprazo1 = new(322.60, 3, 5.6, "05/05/2022")
             {
                 AprazoId = 1,
                 MatriculaId = matricula1.MatriculaId
             };
+             Aprazo aprazo2 = new(322.60, 3, 5.6, "05/05/2022")
+            {
+                AprazoId = 2,
+                MatriculaId = matricula2.MatriculaId
+            };
 
             modelBuilder.Entity<Curso>().HasData(curso1, curso2);
             modelBuilder.Entity<Turma>().HasData(turma1, turma2);
             modelBuilder.Entity<Aluno>().HasData(aluno1, aluno2);
             modelBuilder.Entity<Instrutor>().HasData(instrutor1, instrutor2);
-            modelBuilder.Entity<Matricula>().HasData(matricula1);
-            modelBuilder.Entity<Aprazo>().HasData(aprazo1);
+            modelBuilder.Entity<Matricula>().HasData(matricula1, matricula2);
+            modelBuilder.Entity<Aprazo>().HasData(aprazo1, aprazo2);
 
         }
     }

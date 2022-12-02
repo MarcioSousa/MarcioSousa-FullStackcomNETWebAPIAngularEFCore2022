@@ -1,25 +1,33 @@
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using ProEscolas.API.Data;
+using ProEscolas.API.Models;
 
 namespace ProEscolas.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
     public class AvistaController : ControllerBase
-    {
-        public AvistaController(){
-
+    {  
+        private readonly DataContext context;
+        public AvistaController(DataContext context){
+            this.context = context;
         }
 
         [HttpGet]
-        public string Get()
+        public IEnumerable<Avista> Get()
         {
-            return "value";
+            return context.Avistas.Include(c => c.Matricula);
         }
 
         [HttpGet("{AvistaId}")]
-        public string Get(int AvistaId)
+        public Avista GetById(int AvistaId)
         {
-            return "value";
+            return context.Avistas
+                .Include(c => c.Matricula)
+                .FirstOrDefault(avista => avista.AvistaId == AvistaId);
         }
 
         [HttpPost]

@@ -1,25 +1,36 @@
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using ProEscolas.API.Data;
+using ProEscolas.API.Models;
 
 namespace ProEscolas.API.Controllers
 {    
     [ApiController]
     [Route("api/[controller]")]
     public class MatriculaController : ControllerBase
-    {  
-        public MatriculaController(){
-
+    {    
+        private readonly DataContext context;
+        public MatriculaController(DataContext context){
+            this.context = context;
         }
 
         [HttpGet]
-        public string Get()
+        public IEnumerable<Matricula> Get()
         {
-            return "value";
+            return context.Matriculas
+                .Include(a => a.Aluno)
+                .Include(t => t.Turma);
         }
 
         [HttpGet("{MatriculaId}")]
-        public string Get(int MatriculaId)
+        public Matricula GetById(int MatriculaId)
         {
-            return "value";
+            return context.Matriculas
+                .Include(a => a.Aluno)
+                .Include(t => t.Turma)
+                .FirstOrDefault(matricula => matricula.MatriculaId == MatriculaId);
         }
 
         [HttpPost]

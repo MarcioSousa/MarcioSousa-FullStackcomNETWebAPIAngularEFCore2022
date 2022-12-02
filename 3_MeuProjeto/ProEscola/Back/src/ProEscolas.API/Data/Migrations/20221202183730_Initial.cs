@@ -285,12 +285,22 @@ namespace ProEscolas.API.Data.Migrations
             migrationBuilder.InsertData(
                 table: "Matriculas",
                 columns: new[] { "MatriculaId", "AlunoId", "Data", "Nota", "QtdeFaltas", "TurmaId" },
-                values: new object[] { 1, 2, "01/12/2022 22:37:57", 7.7999999999999998, 7, 1 });
+                values: new object[] { 1, 2, "02/12/2022 15:37:29", 7.7999999999999998, 7, 1 });
+
+            migrationBuilder.InsertData(
+                table: "Matriculas",
+                columns: new[] { "MatriculaId", "AlunoId", "Data", "Nota", "QtdeFaltas", "TurmaId" },
+                values: new object[] { 2, 1, "02/12/2022 15:37:29", 2.6000000000000001, 3, 2 });
 
             migrationBuilder.InsertData(
                 table: "Aprazos",
                 columns: new[] { "AprazoId", "DtVencimento", "MatriculaId", "QtdeMensalidade", "TaxaJuros", "Valor" },
                 values: new object[] { 1, "05/05/2022", 1, 3, 5.5999999999999996, 322.60000000000002 });
+
+            migrationBuilder.InsertData(
+                table: "Aprazos",
+                columns: new[] { "AprazoId", "DtVencimento", "MatriculaId", "QtdeMensalidade", "TaxaJuros", "Valor" },
+                values: new object[] { 2, "05/05/2022", 2, 3, 5.5999999999999996, 322.60000000000002 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Aprazos_MatriculaId",

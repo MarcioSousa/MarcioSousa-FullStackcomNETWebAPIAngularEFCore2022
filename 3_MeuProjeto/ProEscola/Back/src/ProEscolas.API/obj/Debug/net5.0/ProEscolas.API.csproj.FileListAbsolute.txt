@@ -36,3 +36,7 @@ C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\3_MeuProjeto\
 C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\3_MeuProjeto\ProEscola\Back\src\ProEscolas.API\bin\Debug\net5.0\MySqlConnector.dll
 C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\3_MeuProjeto\ProEscola\Back\src\ProEscolas.API\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\3_MeuProjeto\ProEscola\Back\src\ProEscolas.API\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\3_MeuProjeto\ProEscola\Back\src\ProEscolas.API\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\3_MeuProjeto\ProEscola\Back\src\ProEscolas.API\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\3_MeuProjeto\ProEscola\Back\src\ProEscolas.API\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\3_MeuProjeto\ProEscola\Back\src\ProEscolas.API\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
