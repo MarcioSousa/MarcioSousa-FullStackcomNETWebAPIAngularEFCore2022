@@ -33,14 +33,17 @@ namespace ProEscolas.API.Controllers
         }
 
         [HttpPost]
-        public string Post()
+        public string Post(Aluno aluno)
         {
+            context.Alunos.Add(aluno);
+            context.SaveChanges();
             return "value";
         }
 
         [HttpPut("{AlunoId}")]
-        public string Put(int AlunoId)
+        public string Put(int AlunoId, Aluno aluno)
         {
+            context.SaveChanges();
             return "value";
         }
 
