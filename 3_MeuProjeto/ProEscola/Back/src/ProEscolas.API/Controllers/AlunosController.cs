@@ -9,10 +9,10 @@ namespace ProEscolas.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class AlunoController : ControllerBase
+    public class AlunosController : ControllerBase
     {
         private readonly DataContext context;
-        public AlunoController(DataContext context)
+        public AlunosController(DataContext context)
         {
             this.context = context;
         }
