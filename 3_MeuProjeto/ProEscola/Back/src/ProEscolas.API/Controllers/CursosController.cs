@@ -8,10 +8,10 @@ namespace ProEscolas.API.Controllers
 {   
     [ApiController]
     [Route("api/[controller]")]
-    public class CursoController : ControllerBase
+    public class CursosController : ControllerBase
     {  
         private readonly DataContext context;
-        public CursoController(DataContext context){
+        public CursosController(DataContext context){
             this.context = context;
         }
 
