@@ -1,1 +1,13 @@
-<p>alunos works!</p>
+<h1>Alunos do Components</h1>
+
+<div *ngFor="let aluno of alunos">
+  <p><b>Nome: </b>{{aluno.nome}}</p>
+  <p><b>Escolaridade: </b>{{aluno.escolaridade}}</p>
+  <p><b>Cpf: </b>{{aluno.cpf}}</p>
+  <p><b>Celular: </b>{{aluno.celular}}</p>
+  <hr>
+</div>
+
+<!--
+<p>{{aluno.nome}}</p>
+-->
