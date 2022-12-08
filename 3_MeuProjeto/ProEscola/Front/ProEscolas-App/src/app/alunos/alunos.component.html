@@ -3,7 +3,7 @@
 
 <div class="form-inline">
   <div class="form-group">
-    <small  class="text-muted">Filtro</small>
+    <label>Filtro: </label>
     <input
         type="text"
         class="form-control"
@@ -15,23 +15,6 @@
 
 <hr>
 
-<!--
-<div class="form-inline">
-    <label class="visually-hidden" for="inlineFormInputGroupUsername"></label>
-    <div class="input-group">
-      <label class="mr-2">Filtro: </label>
-      <input
-        type="text"
-        class="form-control"
-        placeholder="buscar"
-        [(ngModel)]="filtroLista"
-        />
-    </div>
-</div>
-
-
-
-<h5>Filtro: {{filtroLista}}</h5>-->
 <table class="table table-striped">
   <thead class="table-dark">
     <tr>
@@ -60,8 +43,9 @@
       <td>{{aluno.dataNasc}}</td>
       <td>{{aluno.email}}</td>
       <td>
-        <button type="button" class="btn btn-secondary btn-sm mr-2">Editar</button>
+        <button type="button" class="btn btn-secondary btn-sm mr-2 ">Editar</button>
         <button type="button" class="btn btn-danger btn-sm">Excluir</button>
+
       </td>
     </tr>
   </tbody>
