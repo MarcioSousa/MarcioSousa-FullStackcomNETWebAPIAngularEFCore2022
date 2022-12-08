@@ -1,4 +1,62 @@
-<h1>Alunos do Components</h1>
+<h2>Alunos</h2>
+<hr>
+
+<div class="row row-cols-lg-auto g-3 align-items-center">
+
+  <div>
+    <label class="visually-hidden" for="inlineFormInputGroupUsername"></label>
+    <div class="input-group">
+      <label class="mr-2">Filtro: </label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="buscar"
+        [(ngModel)]="filtroLista"
+        />
+    </div>
+  </div>
+</div>
+
+<h5>Filtro: {{filtroLista}}</h5>
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th><button  type="button" class="btn btn-outline-light btn-sm" (click)="alterarEstadoImagem()">{{!exibirImagem ? 'Exibir' : 'Ocultar'}}</button></th>
+      <th>#</th>
+      <th>Nome</th>
+      <th>Cidade</th>
+      <th>DataNasc</th>
+      <th>Email</th>
+      <th>Opções</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="alunos && alunos.length">
+    <tr *ngFor="let aluno of alunosFiltrados">
+      <!--<td><img src="/assets/imagem.png" alt="" width="50px"></td>
+      <td><img *ngIf="exibirImagem"-->
+      <td><img
+        [collapse]="!exibirImagem"
+        [isAnimated]="true"
+        src="/assets/imagem.png"
+        [style.width.px]="larguraImg"
+        [style.margin.px]="margemImg"></td>
+      <td>{{aluno.alunoId}}</td>
+      <td>{{aluno.nome}}</td>
+      <td>{{aluno.cidade}}</td>
+      <td>{{aluno.dataNasc}}</td>
+      <td>{{aluno.email}}</td>
+      <td></td>
+    </tr>
+  </tbody>
+  <tfoot *ngIf="!alunos.length">
+    <tr>
+      <td colspan="8" class="text-center">
+        <h4>Nenhum evento Encontrado!</h4>
+  </td></tr></tfoot>
+</table>
+
+<!--{{alunos | json}}
+
 
 <div *ngFor="let aluno of alunos">
   <p><b>Nome: </b>{{aluno.nome}}</p>
@@ -8,6 +66,19 @@
   <hr>
 </div>
 
-<!--
+
 <p>{{aluno.nome}}</p>
+
+Diretivas Estruturais:
+*ngIf
+*ngFor
+*ngShow
+
+Binding e Interpolações
+
+Interpolação
+{{aluno[0].nome}} == Pega o resultado de um determinado dado.
+{{alunos | json}}
 -->
+
+
