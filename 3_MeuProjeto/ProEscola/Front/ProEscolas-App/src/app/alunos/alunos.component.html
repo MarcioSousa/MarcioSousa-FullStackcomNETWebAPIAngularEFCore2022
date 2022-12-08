@@ -1,9 +1,22 @@
 <h2>Alunos</h2>
 <hr>
 
-<div class="row row-cols-lg-auto g-3 align-items-center">
+<div class="form-inline">
+  <div class="form-group">
+    <small  class="text-muted">Filtro</small>
+    <input
+        type="text"
+        class="form-control"
+        placeholder="buscar"
+        [(ngModel)]="filtroLista"
+        />
+  </div>
+</div>
 
-  <div>
+<hr>
+
+<!--
+<div class="form-inline">
     <label class="visually-hidden" for="inlineFormInputGroupUsername"></label>
     <div class="input-group">
       <label class="mr-2">Filtro: </label>
@@ -14,10 +27,11 @@
         [(ngModel)]="filtroLista"
         />
     </div>
-  </div>
 </div>
 
-<h5>Filtro: {{filtroLista}}</h5>
+
+
+<h5>Filtro: {{filtroLista}}</h5>-->
 <table class="table table-striped">
   <thead class="table-dark">
     <tr>
@@ -45,7 +59,10 @@
       <td>{{aluno.cidade}}</td>
       <td>{{aluno.dataNasc}}</td>
       <td>{{aluno.email}}</td>
-      <td></td>
+      <td>
+        <button type="button" class="btn btn-secondary btn-sm mr-2">Editar</button>
+        <button type="button" class="btn btn-danger btn-sm">Excluir</button>
+      </td>
     </tr>
   </tbody>
   <tfoot *ngIf="!alunos.length">
