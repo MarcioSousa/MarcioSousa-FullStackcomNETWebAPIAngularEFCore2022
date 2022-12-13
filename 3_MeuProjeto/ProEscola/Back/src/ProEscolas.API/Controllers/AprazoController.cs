@@ -2,8 +2,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ProEscolas.API.Data;
-using ProEscolas.API.Models;
+using ProEscolas.Persistence;
+using ProEscolas.Domain;
 
 namespace ProEscolas.API.Controllers 
 { 
@@ -11,11 +11,12 @@ namespace ProEscolas.API.Controllers
     [Route("api/[controller]")]
     public class AprazoController : ControllerBase
     {  
-        private readonly DataContext context;
-        public AprazoController(DataContext context){
+        private readonly ProEscolasContext context;
+        public AprazoController(ProEscolasContext context){
             this.context = context;
         }
 
+        /*
         [HttpGet]
         public IEnumerable<Aprazo> Get()
         {
@@ -24,11 +25,11 @@ namespace ProEscolas.API.Controllers
         }
 
         [HttpGet("{AprazoId}")]
-        public Aprazo GetById(int AprazoId)
+        public Aprazo GetById(int Id)
         {
             return context.Aprazos
                 .Include(c => c.Matricula)
-                .FirstOrDefault(aprazo => aprazo.AprazoId == AprazoId);
+                .FirstOrDefault(aprazo => aprazo.Id == Id);
         }
 
         [HttpPost]
@@ -38,15 +39,16 @@ namespace ProEscolas.API.Controllers
         }
 
         [HttpPut("{AprazoId}")]
-        public string Put(int AprazoId)
+        public string Put(int Id)
         {
             return "value";
         }
 
         [HttpDelete("{AprazoId}")]
-        public string Delete(int AprazoId)
+        public string Delete(int Id)
         {
             return "value";
         }
+        */
     }
 }

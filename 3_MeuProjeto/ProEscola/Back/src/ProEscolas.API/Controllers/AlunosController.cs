@@ -2,8 +2,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ProEscolas.API.Data;
-using ProEscolas.API.Models;
+using ProEscolas.Persistence;
+using ProEscolas.Domain;
 
 namespace ProEscolas.API.Controllers
 {
@@ -11,8 +11,8 @@ namespace ProEscolas.API.Controllers
     [Route("api/[controller]")]
     public class AlunosController : ControllerBase
     {
-        private readonly DataContext context;
-        public AlunosController(DataContext context)
+        private readonly ProEscolasContext context;
+        public AlunosController(ProEscolasContext context)
         {
             this.context = context;
         }
@@ -20,16 +20,16 @@ namespace ProEscolas.API.Controllers
         [HttpGet]
         public IEnumerable<Aluno> Get()
         {
-            return context.Alunos
-                .Include(m => m.Matricula);
+            return context.Alunos;
+                //.Include(m => m.Matricula);
         }
 
         [HttpGet("{AlunoId}")]
-        public Aluno GetById(int AlunoId)
+        public Aluno GetById(int Id)
         {
             return context.Alunos
-                .Include(m => m.Matricula)
-                .FirstOrDefault(aluno => aluno.AlunoId == AlunoId);        
+                //.Include(m => m.Matricula)
+                .FirstOrDefault(aluno => aluno.Id == Id);        
         }
 
         [HttpPost]
@@ -41,14 +41,14 @@ namespace ProEscolas.API.Controllers
         }
 
         [HttpPut("{AlunoId}")]
-        public string Put(int AlunoId, Aluno aluno)
+        public string Put(int Id, Aluno aluno)
         {
             context.SaveChanges();
             return "value";
         }
 
         [HttpDelete("{AlunoId}")]
-        public string Delete(int AlunoId)
+        public string Delete(int Id)
         {
             return "value";
         }

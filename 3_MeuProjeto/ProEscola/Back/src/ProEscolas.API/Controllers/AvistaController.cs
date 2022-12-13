@@ -2,8 +2,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ProEscolas.API.Data;
-using ProEscolas.API.Models;
+using ProEscolas.Persistence;
+using ProEscolas.Domain;
 
 namespace ProEscolas.API.Controllers
 {
@@ -11,11 +11,11 @@ namespace ProEscolas.API.Controllers
     [Route("api/[controller]")]
     public class AvistaController : ControllerBase
     {  
-        private readonly DataContext context;
-        public AvistaController(DataContext context){
+        private readonly ProEscolasContext context;
+        public AvistaController(ProEscolasContext context){
             this.context = context;
         }
-
+        /*
         [HttpGet]
         public IEnumerable<Avista> Get()
         {
@@ -23,11 +23,11 @@ namespace ProEscolas.API.Controllers
         }
 
         [HttpGet("{AvistaId}")]
-        public Avista GetById(int AvistaId)
+        public Avista GetById(int Id)
         {
             return context.Avistas
                 .Include(c => c.Matricula)
-                .FirstOrDefault(avista => avista.AvistaId == AvistaId);
+                .FirstOrDefault(avista => avista.Id == Id);
         }
 
         [HttpPost]
@@ -37,16 +37,17 @@ namespace ProEscolas.API.Controllers
         }
 
         [HttpPut("{AvistaId}")]
-        public string Put(int AvistaId)
+        public string Put(int Id)
         {
             return "value";
         }
 
         [HttpDelete("{AvistaId}")]
-        public string Delete(int AvistaId)
+        public string Delete(int Id)
         {
             return "value";
         }
+        */
 
     }
 }

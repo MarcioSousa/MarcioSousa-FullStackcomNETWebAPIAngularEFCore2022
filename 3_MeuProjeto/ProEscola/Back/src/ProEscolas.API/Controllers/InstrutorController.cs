@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using ProEscolas.API.Data;
-using ProEscolas.API.Models;
+using ProEscolas.Persistence;
+using ProEscolas.Domain;
 
 namespace ProEscolas.API.Controllers
 {    
@@ -10,11 +10,11 @@ namespace ProEscolas.API.Controllers
     [Route("api/[controller]")]
     public class InstrutorController : ControllerBase
     {  
-        private readonly DataContext context;
-        public InstrutorController(DataContext context){
+        private readonly ProEscolasContext context;
+        public InstrutorController(ProEscolasContext context){
             this.context = context;
         }
-
+        /*
         [HttpGet]
         public IEnumerable<Instrutor> Get()
         {
@@ -22,9 +22,9 @@ namespace ProEscolas.API.Controllers
         }
 
         [HttpGet("{InstrutorId}")]
-        public Instrutor GetById(int InstrutorId)
+        public Instrutor GetById(int Id)
         {
-            return context.Instrutores.FirstOrDefault(intrutor => intrutor.InstrutorId == InstrutorId);
+            return context.Instrutores.FirstOrDefault(intrutor => intrutor.Id == Id);
         }
 
         [HttpPost]
@@ -34,16 +34,17 @@ namespace ProEscolas.API.Controllers
         }
 
         [HttpPut("{InstrutorId}")]
-        public string Put(int InstrutorId)
+        public string Put(int Id)
         {
             return "value";
         }
 
         [HttpDelete("{InstrutorId}")]
-        public string Delete(int InstrutorId)
+        public string Delete(int Id)
         {
             return "value";
         }
+        */
 
     }
 }

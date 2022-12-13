@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using ProEscolas.API.Data;
+using ProEscolas.Persistence;
 
 namespace ProEscolas.API
 {
@@ -29,7 +29,7 @@ namespace ProEscolas.API
         public void ConfigureServices(IServiceCollection services)
         {
             string mySqlConnection = Configuration.GetConnectionString("MySql");
-            services.AddDbContextPool<DataContext>(option =>
+            services.AddDbContextPool<ProEscolasContext>(option =>
                 option.UseMySql(mySqlConnection,
                 ServerVersion.AutoDetect(mySqlConnection)));
 

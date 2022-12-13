@@ -1,0 +1,12 @@
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\3_MeuProjeto\ProEscola\Back\src\ProEscolas.Domain\bin\Debug\net5.0\ProEscolas.Domain.deps.json
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\3_MeuProjeto\ProEscola\Back\src\ProEscolas.Domain\bin\Debug\net5.0\ProEscolas.Domain.dll
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\3_MeuProjeto\ProEscola\Back\src\ProEscolas.Domain\bin\Debug\net5.0\ProEscolas.Domain.pdb
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\3_MeuProjeto\ProEscola\Back\src\ProEscolas.Domain\obj\Debug\net5.0\ProEscolas.Domain.csproj.AssemblyReference.cache
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\3_MeuProjeto\ProEscola\Back\src\ProEscolas.Domain\obj\Debug\net5.0\ProEscolas.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\3_MeuProjeto\ProEscola\Back\src\ProEscolas.Domain\obj\Debug\net5.0\ProEscolas.Domain.AssemblyInfoInputs.cache
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\3_MeuProjeto\ProEscola\Back\src\ProEscolas.Domain\obj\Debug\net5.0\ProEscolas.Domain.AssemblyInfo.cs
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\3_MeuProjeto\ProEscola\Back\src\ProEscolas.Domain\obj\Debug\net5.0\ProEscolas.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\3_MeuProjeto\ProEscola\Back\src\ProEscolas.Domain\obj\Debug\net5.0\ProEscolas.Domain.dll
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\3_MeuProjeto\ProEscola\Back\src\ProEscolas.Domain\obj\Debug\net5.0\ProEscolas.Domain.pdb
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\3_MeuProjeto\ProEscola\Back\src\ProEscolas.Domain\obj\Debug\net5.0\ref\ProEscolas.Domain.dll
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\3_MeuProjeto\ProEscola\Back\src\ProEscolas.Domain\obj\Debug\net5.0\refint\ProEscolas.Domain.dll

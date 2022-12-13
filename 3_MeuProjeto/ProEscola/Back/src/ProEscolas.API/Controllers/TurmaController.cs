@@ -2,8 +2,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ProEscolas.API.Data;
-using ProEscolas.API.Models;
+using ProEscolas.Persistence;
+using ProEscolas.Domain;
 
 namespace ProEscolas.API.Controllers
 {    
@@ -11,11 +11,11 @@ namespace ProEscolas.API.Controllers
     [Route("api/[controller]")]
     public class TurmaController : ControllerBase
     {  
-        private readonly DataContext context;
-        public TurmaController(DataContext context){
+        private readonly ProEscolasContext context;
+        public TurmaController(ProEscolasContext context){
             this.context = context;
         }
-
+        /*
         [HttpGet]
         public IEnumerable<Turma> Get()
         {
@@ -25,12 +25,12 @@ namespace ProEscolas.API.Controllers
         }
 
         [HttpGet("{TurmaId}")]
-        public Turma GetById(int TurmaId)
+        public Turma GetById(int Id)
         {
             return context.Turmas
                 .Include(c => c.Curso)
                 .Include(i => i.Instrutor)
-                .FirstOrDefault(turma => turma.TurmaId == TurmaId);
+                .FirstOrDefault(turma => turma.Id == Id);
         }
 
         [HttpPost]
@@ -40,16 +40,16 @@ namespace ProEscolas.API.Controllers
         }
 
         [HttpPut("{TurmaId}")]
-        public string Put(int TurmaId)
+        public string Put(int Id)
         {
             return "value";
         }
 
         [HttpDelete("{TurmaId}")]
-        public string Delete(int TurmaId)
+        public string Delete(int Id)
         {
             return "value";
         }
-
+        */
     }
 }
