@@ -12,9 +12,9 @@ namespace ProEscolas.Persistence
 
          Task<bool> SaveChangesAsync();
 
-         //Eventos
-         Task<Aluno[]> GetAllAlunosByIdAsync(int AlunoId);
+         //ALUNOS
+         Task<Aluno[]> GetAllAlunosByIdAsync(string nome);
          Task<Aluno[]> GetAllAlunosAsync();
-         Task<Aluno> GetAllAlunoByIdAsync(int AlunoId);
+         Task<Aluno> GetAllAlunoByIdAsync(int alunoId);
     }
 }

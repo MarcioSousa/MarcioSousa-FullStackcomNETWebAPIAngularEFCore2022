@@ -1,4 +1,6 @@
+using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using ProEscolas.Domain;
 
 namespace ProEscolas.Persistence
@@ -27,19 +29,37 @@ namespace ProEscolas.Persistence
             _context.RemoveRange(entityArray);
         }
 
-        public Task<Aluno> GetAllAlunoByIdAsync(int AlunoId)
+        public async Task<Aluno> GetAllAlunoByIdAsync(int alunoId)
         {
-            throw new System.NotImplementedException();
+            IQueryable<Aluno> query = _context.Alunos;
+
+            query = query.OrderBy(e => e.Id).Where(e => e.Id == alunoId);
+            
+            return await query.FirstOrDefaultAsync();
         }
 
-        public Task<Aluno[]> GetAllAlunosAsync()
+        public async Task<Aluno[]> GetAllAlunosAsync()
         {
-            throw new System.NotImplementedException();
+            //IQueryable<Aluno> query = _context.Alunos.Include( e => e.Lotes).Include(e => e.RedesSociais);
+            
+            //if(includePalestrante){
+            //    query = query.Include(e => e.PalestrantesEventos).ThenInclude(pe => pe.Palestrante);
+            //}
+            
+            IQueryable<Aluno> query = _context.Alunos;
+
+            query = query.OrderBy(e => e.Id);
+
+            return await query.ToArrayAsync();
         }
 
-        public Task<Aluno[]> GetAllAlunosByIdAsync(int AlunoId)
+        public async Task<Aluno[]> GetAllAlunosByIdAsync(string nome)
         {
-            throw new System.NotImplementedException();
+            IQueryable<Aluno> query = _context.Alunos;
+
+            query = query.OrderBy(e => e.Id).Where(e => e.Nome.ToLower().Contains(nome.ToLower()));
+            
+            return await query.ToArrayAsync();
         }
 
         public async Task<bool> SaveChangesAsync()
