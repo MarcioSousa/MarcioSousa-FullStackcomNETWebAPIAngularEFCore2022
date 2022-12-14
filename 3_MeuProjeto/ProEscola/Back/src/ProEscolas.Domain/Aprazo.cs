@@ -8,7 +8,7 @@ namespace ProEscolas.Domain
         public int QtdeMensalidade { get; set; }
         public double TaxaJuros { get; set; }
         public Matricula Matricula { get; set; }
-        public int MatriculaId { get; set; }
+        public int? MatriculaId { get; set; }
         public Aprazo(double valor, int qtdeMensalidade, double taxaJuros, string dtVencimento)
         {
             Valor = valor;

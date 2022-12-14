@@ -14,14 +14,14 @@ namespace ProEscolas.API.Controllers
         public CursosController(ProEscolasContext context){
             this.context = context;
         }
-        /*
+        
         [HttpGet]
         public IEnumerable<Curso> Get()
         {
             return context.Cursos;
         }
 
-        [HttpGet("{CursoId}")]
+        [HttpGet("{Id}")]
         public Curso GetById(int Id)
         {
             return context.Cursos.FirstOrDefault(curso => curso.Id == Id);
@@ -33,18 +33,17 @@ namespace ProEscolas.API.Controllers
             return "value";
         }
 
-        [HttpPut("{CursoId}")]
+        [HttpPut("{Id}")]
         public string Put(int Id)
         {
             return "value";
         }
 
-        [HttpDelete("{CursoId}")]
+        [HttpDelete("{Id}")]
         public string Delete(int Id)
         {
             return "value";
         }
-        */
 
     }
 }

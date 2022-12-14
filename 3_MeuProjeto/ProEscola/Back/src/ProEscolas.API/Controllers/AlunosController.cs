@@ -21,14 +21,12 @@ namespace ProEscolas.API.Controllers
         public IEnumerable<Aluno> Get()
         {
             return context.Alunos;
-                //.Include(m => m.Matricula);
         }
 
-        [HttpGet("{AlunoId}")]
+        [HttpGet("{Id}")]
         public Aluno GetById(int Id)
         {
             return context.Alunos
-                //.Include(m => m.Matricula)
                 .FirstOrDefault(aluno => aluno.Id == Id);        
         }
 
@@ -40,17 +38,18 @@ namespace ProEscolas.API.Controllers
             return "value";
         }
 
-        [HttpPut("{AlunoId}")]
+        [HttpPut("{Id}")]
         public string Put(int Id, Aluno aluno)
         {
             context.SaveChanges();
             return "value";
         }
 
-        [HttpDelete("{AlunoId}")]
+        [HttpDelete("{Id}")]
         public string Delete(int Id)
         {
             return "value";
         }
+
     }
 }

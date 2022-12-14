@@ -15,7 +15,7 @@ namespace ProEscolas.API.Controllers
         public TurmaController(ProEscolasContext context){
             this.context = context;
         }
-        /*
+        
         [HttpGet]
         public IEnumerable<Turma> Get()
         {
@@ -24,7 +24,7 @@ namespace ProEscolas.API.Controllers
                 .Include(i => i.Instrutor);
         }
 
-        [HttpGet("{TurmaId}")]
+        [HttpGet("{Id}")]
         public Turma GetById(int Id)
         {
             return context.Turmas
@@ -39,17 +39,17 @@ namespace ProEscolas.API.Controllers
             return "value";
         }
 
-        [HttpPut("{TurmaId}")]
+        [HttpPut("{Id}")]
         public string Put(int Id)
         {
             return "value";
         }
 
-        [HttpDelete("{TurmaId}")]
+        [HttpDelete("{Id}")]
         public string Delete(int Id)
         {
             return "value";
         }
-        */
+        
     }
 }

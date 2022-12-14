@@ -15,16 +15,16 @@ namespace ProEscolas.API.Controllers
         public MatriculaController(ProEscolasContext context){
             this.context = context;
         }
-        /*
+        
         [HttpGet]
         public IEnumerable<Matricula> Get()
         {
-            return context.Matriculas;
-                //.Include(a => a.Aluno)
-                //.Include(t => t.Turma);
+            return context.Matriculas
+                .Include(a => a.Aluno)
+                .Include(t => t.Turma);
         }
 
-        [HttpGet("{MatriculaId}")]
+        [HttpGet("{Id}")]
         public Matricula GetById(int Id)
         {
             return context.Matriculas
@@ -39,17 +39,17 @@ namespace ProEscolas.API.Controllers
             return "value";
         }
 
-        [HttpPut("{MatriculaId}")]
+        [HttpPut("{Id}")]
         public string Put(int Id)
         {
             return "value";
         }
 
-        [HttpDelete("{MatriculaId}")]
+        [HttpDelete("{Id}")]
         public string Delete(int Id)
         {
             return "value";
         }
-        */
+        
     }
 }

@@ -16,7 +16,7 @@ namespace ProEscolas.API.Controllers
             this.context = context;
         }
 
-        /*
+        
         [HttpGet]
         public IEnumerable<Aprazo> Get()
         {
@@ -24,7 +24,7 @@ namespace ProEscolas.API.Controllers
                 .Include(c => c.Matricula);
         }
 
-        [HttpGet("{AprazoId}")]
+        [HttpGet("{Id}")]
         public Aprazo GetById(int Id)
         {
             return context.Aprazos
@@ -38,17 +38,17 @@ namespace ProEscolas.API.Controllers
             return "value";
         }
 
-        [HttpPut("{AprazoId}")]
+        [HttpPut("{Id}")]
         public string Put(int Id)
         {
             return "value";
         }
 
-        [HttpDelete("{AprazoId}")]
+        [HttpDelete("{Id}")]
         public string Delete(int Id)
         {
             return "value";
         }
-        */
+        
     }
 }

@@ -1,0 +1,12 @@
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Domain\bin\Debug\net5.0\ProProdutos.Domain.deps.json
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Domain\bin\Debug\net5.0\ProProdutos.Domain.dll
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Domain\bin\Debug\net5.0\ref\ProProdutos.Domain.dll
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Domain\bin\Debug\net5.0\ProProdutos.Domain.pdb
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Domain\obj\Debug\net5.0\ProProdutos.Domain.csproj.AssemblyReference.cache
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Domain\obj\Debug\net5.0\ProProdutos.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Domain\obj\Debug\net5.0\ProProdutos.Domain.AssemblyInfoInputs.cache
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Domain\obj\Debug\net5.0\ProProdutos.Domain.AssemblyInfo.cs
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Domain\obj\Debug\net5.0\ProProdutos.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Domain\obj\Debug\net5.0\ProProdutos.Domain.dll
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Domain\obj\Debug\net5.0\ref\ProProdutos.Domain.dll
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Domain\obj\Debug\net5.0\ProProdutos.Domain.pdb

@@ -1,0 +1,17 @@
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Application\bin\Debug\net5.0\ProProdutos.Application.deps.json
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Application\bin\Debug\net5.0\ProProdutos.Application.dll
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Application\bin\Debug\net5.0\ref\ProProdutos.Application.dll
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Application\bin\Debug\net5.0\ProProdutos.Application.pdb
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Application\obj\Debug\net5.0\ProProdutos.Application.csproj.AssemblyReference.cache
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Application\obj\Debug\net5.0\ProProdutos.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Application\obj\Debug\net5.0\ProProdutos.Application.AssemblyInfoInputs.cache
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Application\obj\Debug\net5.0\ProProdutos.Application.AssemblyInfo.cs
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Application\obj\Debug\net5.0\ProProdutos.Application.csproj.CoreCompileInputs.cache
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Application\obj\Debug\net5.0\ProProdutos.Application.dll
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Application\obj\Debug\net5.0\ref\ProProdutos.Application.dll
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Application\obj\Debug\net5.0\ProProdutos.Application.pdb
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Application\bin\Debug\net5.0\ProProdutos.Domain.dll
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Application\bin\Debug\net5.0\ProProdutos.Domain.pdb
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Application\obj\Debug\net5.0\ProProdutos.Application.csproj.CopyComplete
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Application\bin\Debug\net5.0\ProProdutos.Persistence.dll
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\5_ProjetoProduto\ProProduto\Back\src\ProProdutos.Application\bin\Debug\net5.0\ProProdutos.Persistence.pdb

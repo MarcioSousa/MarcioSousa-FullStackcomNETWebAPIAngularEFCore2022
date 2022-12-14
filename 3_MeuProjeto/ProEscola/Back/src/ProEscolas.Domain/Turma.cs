@@ -12,12 +12,11 @@ namespace ProEscolas.Domain
         public string Periodo { get; set; }
         public int QtdeVagas { get; set; }
         public string Observacoes { get; set; }
-        public virtual ICollection<Matricula> Matriculas { get; set; }
         public Instrutor Instrutor { get; set; }
-        public int InstrutorId { get; set; }
+        public int? InstrutorId { get; set; }
         public Curso Curso { get; set; }
-        public int CursoId { get; set; }
-
+        public int? CursoId { get; set; }
+        public virtual ICollection<Matricula> Matriculas { get; set; }
         public Turma(string siglaTurma, string descricao)
         {
             this.SiglaTurma = siglaTurma;

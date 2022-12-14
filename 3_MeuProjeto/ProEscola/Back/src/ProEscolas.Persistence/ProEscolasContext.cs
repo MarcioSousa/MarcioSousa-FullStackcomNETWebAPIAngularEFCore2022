@@ -9,19 +9,18 @@ namespace ProEscolas.Persistence
         public ProEscolasContext(DbContextOptions<ProEscolasContext> options) : base(options) { }
 
         public DbSet<Aluno> Alunos { get; set; }
-        /*public DbSet<Curso> Cursos { get; set; }
+        public DbSet<Curso> Cursos { get; set; }
         public DbSet<Turma> Turmas { get; set; }
         public DbSet<Instrutor> Instrutores { get; set; }
         public DbSet<Matricula> Matriculas { get; set; }
         public DbSet<Avista> Avistas { get; set; }
-        public DbSet<Aprazo> Aprazos { get; set; }*/
+        public DbSet<Aprazo> Aprazos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //Relacionamento muitos pra muitos.
             //modelBuilder.Entity<tabelamuitosmuitos>().HasKey(PE => new {PE.id da primeira tabela, PE.id da outra tabela});
 
-            /*
             Curso curso1 = new("AAA", "Analista")
             {
                 Id = 1,
@@ -83,7 +82,7 @@ namespace ProEscolas.Persistence
                 Formacao = "Ensino Fundamental",
                 AreaAtuacao = "Eletrecista"
             };
-
+ 
             Turma turma1 = new("ADS", "Analista e Desenvolvimento de Sistemas")
             {
                 Id = 1,
@@ -164,25 +163,26 @@ namespace ProEscolas.Persistence
                 QtdeFaltas = 3,
                 AlunoId = aluno1.Id
             };
-
+          
             Aprazo aprazo1 = new(322.60, 3, 5.6, "05/05/2022")
             {
                 Id = 1,
                 MatriculaId = matricula1.Id
             };
-             Aprazo aprazo2 = new(322.60, 3, 5.6, "05/05/2022")
+            Aprazo aprazo2 = new(322.60, 3, 5.6, "05/05/2022")
             {
                 Id = 2,
                 MatriculaId = matricula2.Id
             };
-            
+           
+
             modelBuilder.Entity<Curso>().HasData(curso1, curso2);
             modelBuilder.Entity<Turma>().HasData(turma1, turma2);
             modelBuilder.Entity<Aluno>().HasData(aluno1, aluno2);
             modelBuilder.Entity<Instrutor>().HasData(instrutor1, instrutor2);
             modelBuilder.Entity<Matricula>().HasData(matricula1, matricula2);
             modelBuilder.Entity<Aprazo>().HasData(aprazo1, aprazo2);
-            */
+            
         }
     }
 }

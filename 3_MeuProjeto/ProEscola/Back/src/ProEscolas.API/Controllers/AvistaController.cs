@@ -15,14 +15,14 @@ namespace ProEscolas.API.Controllers
         public AvistaController(ProEscolasContext context){
             this.context = context;
         }
-        /*
+        
         [HttpGet]
         public IEnumerable<Avista> Get()
         {
             return context.Avistas.Include(c => c.Matricula);
         }
 
-        [HttpGet("{AvistaId}")]
+        [HttpGet("{Id}")]
         public Avista GetById(int Id)
         {
             return context.Avistas
@@ -36,18 +36,18 @@ namespace ProEscolas.API.Controllers
             return "value";
         }
 
-        [HttpPut("{AvistaId}")]
+        [HttpPut("{Id}")]
         public string Put(int Id)
         {
             return "value";
         }
 
-        [HttpDelete("{AvistaId}")]
+        [HttpDelete("{Id}")]
         public string Delete(int Id)
         {
             return "value";
         }
-        */
+        
 
     }
 }
