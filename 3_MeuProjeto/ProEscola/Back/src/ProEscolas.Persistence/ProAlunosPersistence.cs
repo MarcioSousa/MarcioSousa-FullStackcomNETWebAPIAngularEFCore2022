@@ -2,12 +2,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using ProEscolas.Domain;
+using ProEscolas.Persistence.Interface;
 
 namespace ProEscolas.Persistence
 {
-    public class ProAlunosPersistence : IProAlunosPersistence
+    public class ProAlunosPersistence : IAlunosPersistence
     {
-      
         private readonly ProEscolasContext _context;
         public ProAlunosPersistence(ProEscolasContext context)
         {

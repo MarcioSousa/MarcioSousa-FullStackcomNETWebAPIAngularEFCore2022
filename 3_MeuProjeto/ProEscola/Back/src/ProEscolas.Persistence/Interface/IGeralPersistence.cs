@@ -1,9 +1,8 @@
 using System.Threading.Tasks;
-using ProEscolas.Domain;
 
-namespace ProEscolas.Persistence
+namespace ProEscolas.Persistence.Interface
 {
-    public interface IProAlunosPersistence
+    public interface IGeralPersistence
     {
         void Add<T>(T entity) where T: class;
          void Update<T>(T entity) where T: class;
@@ -11,10 +10,5 @@ namespace ProEscolas.Persistence
          void DeleteRange<T>(T entity) where T: class;
 
          Task<bool> SaveChangesAsync();
-
-         //ALUNOS
-         Task<Aluno[]> GetAllAlunosByIdAsync(string nome);
-         Task<Aluno[]> GetAllAlunosAsync();
-         Task<Aluno> GetAllAlunoByIdAsync(int alunoId);
     }
 }
