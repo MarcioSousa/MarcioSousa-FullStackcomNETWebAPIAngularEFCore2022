@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using ProEscolas.Domain;
 
-namespace ProEscolas.Persistence.Interface
+namespace ProEscolas.Persistence.Interfaces
 {
     public interface IInstrutorPersistence : IGeralPersistence
     {
