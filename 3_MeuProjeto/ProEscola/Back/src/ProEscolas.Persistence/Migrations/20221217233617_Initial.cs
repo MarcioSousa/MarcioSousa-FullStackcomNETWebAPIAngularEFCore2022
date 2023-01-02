@@ -285,12 +285,12 @@ namespace ProEscolas.Persistence.Migrations
             migrationBuilder.InsertData(
                 table: "Matriculas",
                 columns: new[] { "Id", "AlunoId", "Data", "Nota", "QtdeFaltas", "TurmaId" },
-                values: new object[] { 1, 2, "14/12/2022 16:42:30", 7.7999999999999998, 7, 1 });
+                values: new object[] { 1, 2, "17/12/2022 20:36:16", 7.7999999999999998, 7, 1 });
 
             migrationBuilder.InsertData(
                 table: "Matriculas",
                 columns: new[] { "Id", "AlunoId", "Data", "Nota", "QtdeFaltas", "TurmaId" },
-                values: new object[] { 2, 1, "14/12/2022 16:42:30", 2.6000000000000001, 3, 2 });
+                values: new object[] { 2, 1, "17/12/2022 20:36:16", 2.6000000000000001, 3, 2 });
 
             migrationBuilder.InsertData(
                 table: "Aprazos",

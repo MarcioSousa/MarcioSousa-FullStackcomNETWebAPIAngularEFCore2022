@@ -3,7 +3,7 @@ using ProEscolas.Domain;
 
 namespace ProEscolas.Application.Services
 {
-    public interface IAlunosService
+    public interface IAlunoService
     {
         Task<Aluno> Add(Aluno model);
         Task<Aluno> Update(int alunoId, Aluno model);

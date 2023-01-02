@@ -12,7 +12,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using ProEscolas.Application;
+using ProEscolas.Application.Services;
 using ProEscolas.Persistence;
+using ProEscolas.Persistence.Interfaces;
 
 namespace ProEscolas.API
 {
@@ -36,13 +39,15 @@ namespace ProEscolas.API
 
             //services.AddControllers();
 
-            
-
             //Resolvendo erro de ciclo utilizando NewtonsoftJson da microsoft
             services.AddControllers()
                 .AddNewtonsoftJson(option => 
                     option.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             
+            services.AddScoped<IAlunoService, AlunoService>();
+            services.AddScoped<IGeralPersistence, GeralPersistence>();
+            services.AddScoped<IAlunoPersistence, AlunoPersistence>();
+
             services.AddCors();
             
             services.AddSwaggerGen(c =>

@@ -2,8 +2,6 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ProEscolas.Persistence;
 
 namespace ProEscolas.Persistence.Migrations
 {
@@ -390,7 +388,7 @@ namespace ProEscolas.Persistence.Migrations
                         {
                             Id = 1,
                             AlunoId = 2,
-                            Data = "14/12/2022 16:42:30",
+                            Data = "17/12/2022 20:36:16",
                             Nota = 7.7999999999999998,
                             QtdeFaltas = 7,
                             TurmaId = 1
@@ -399,7 +397,7 @@ namespace ProEscolas.Persistence.Migrations
                         {
                             Id = 2,
                             AlunoId = 1,
-                            Data = "14/12/2022 16:42:30",
+                            Data = "17/12/2022 20:36:16",
                             Nota = 2.6000000000000001,
                             QtdeFaltas = 3,
                             TurmaId = 2

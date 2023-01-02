@@ -6,27 +6,13 @@ using ProEscolas.Persistence.Interfaces;
 
 namespace ProEscolas.Persistence
 {
-    public class ProAlunoPersistence : IAlunoPersistence
+    public class AlunoPersistence : IAlunoPersistence
     {
         private readonly ProEscolasContext _context;
-        public ProAlunoPersistence(ProEscolasContext context)
+        
+        public AlunoPersistence(ProEscolasContext context)
         {
             context = _context;
-        }
-
-        public void Add<T>(T entity) where T : class
-        {
- _context.Add(entity);
-        }
-
-        public void Delete<T>(T entity) where T : class
-        {
-            _context.Remove(entity);
-        }
-
-        public void DeleteRange<T>(T[] entityArray) where T : class
-        {
-            _context.RemoveRange(entityArray);
         }
 
         public async Task<Aluno[]> Get(string nome)
@@ -40,11 +26,6 @@ namespace ProEscolas.Persistence
 
         public async Task<Aluno[]> Get()
         {
-            //IQueryable<Aluno> query = _context.Alunos.Include( e => e.Lotes).Include(e => e.RedesSociais);
-            
-            //if(includePalestrante){
-                //    query = query.Include(e => e.PalestrantesEventos).ThenInclude(pe => pe.Palestrante);
-                //}
             IQueryable<Aluno> query = _context.Alunos;
             
             query = query.OrderBy(e => e.Id);
@@ -60,16 +41,7 @@ namespace ProEscolas.Persistence
             
             return await query.FirstOrDefaultAsync();
         }
-
-        public async Task<bool> SaveChangesAsync()
-        {
-            return(await _context.SaveChangesAsync()) > 0;
-        }
-
-        public void Update<T>(T entity) where T : class
-        {
-            _context.Update(entity);
-        }
+        
     }
 
 }

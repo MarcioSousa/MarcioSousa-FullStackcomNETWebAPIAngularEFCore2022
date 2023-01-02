@@ -3,7 +3,7 @@ using ProEscolas.Domain;
 
 namespace ProEscolas.Persistence.Interfaces
 {
-    public interface IAlunoPersistence : IGeralPersistence
+    public interface IAlunoPersistence 
     {
          Task<Aluno[]> Get(string nome);
          Task<Aluno[]> Get();

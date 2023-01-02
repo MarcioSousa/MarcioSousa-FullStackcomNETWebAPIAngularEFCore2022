@@ -1,9 +1,9 @@
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using ProEscolas.Persistence;
 using ProEscolas.Domain;
+using ProEscolas.Application.Services;
+using System.Threading.Tasks;
+using System;
+using Microsoft.AspNetCore.Http;
 
 namespace ProEscolas.API.Controllers
 {
@@ -11,44 +11,103 @@ namespace ProEscolas.API.Controllers
     [Route("api/[controller]")]
     public class AlunosController : ControllerBase
     {
-        private readonly ProEscolasContext context;
-        public AlunosController(ProEscolasContext context)
+        private readonly IAlunoService _alunoService;
+
+        public AlunosController(IAlunoService alunoService)
         {
-            this.context = context;
+            _alunoService = alunoService;
         }
 
         [HttpGet]
-        public IEnumerable<Aluno> Get()
+        public async Task<IActionResult> Get()
         {
-            return context.Alunos;
+            try
+            {
+                var alunos = await _alunoService.Get();
+                if(alunos == null) return NotFound("Nenhum aluno encotrado.");
+                return Ok(alunos);
+            }
+            catch (Exception ex)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, $"Erro ao tentar recuperar alunos. Erro: {ex.Message}");
+            }
         }
 
         [HttpGet("{Id}")]
-        public Aluno GetById(int Id)
+        public async Task<IActionResult> GetById(int Id)
         {
-            return context.Alunos
-                .FirstOrDefault(aluno => aluno.Id == Id);        
+            try
+            {
+                var aluno = await _alunoService.Get(Id);
+                if(aluno == null) return NotFound("Aluno por Id não encotnrado.");
+                return Ok(aluno);
+            }
+            catch (Exception ex)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, $"Erro ao tentar recuperar alunos. Erro: {ex.Message}");
+            }
+            //return context.Alunos
+            //    .FirstOrDefault(aluno => aluno.Id == Id);        
+        }
+        
+        [HttpGet("nome/{nome}")]
+        public async Task<IActionResult> GetByNome(string nome)
+        {
+            try
+            {
+                var alunos = await _alunoService.Get(nome);
+                if(alunos == null) return NotFound("Alunos por nome não encotnrados.");
+                return Ok(alunos);
+            }
+            catch (Exception ex)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, $"Erro ao tentar recuperar alunos. Erro: {ex.Message}");
+            }     
         }
 
         [HttpPost]
-        public string Post(Aluno aluno)
+        public async Task<IActionResult> Post(Aluno model)
         {
-            context.Alunos.Add(aluno);
-            context.SaveChanges();
-            return "value";
+            try
+            {
+                var aluno = await _alunoService.Add(model);
+                if(aluno == null) return BadRequest("Erro ao tentar adicionar aluno.");
+                return Ok(aluno);
+            }
+            catch (Exception ex)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, $"Erro ao tentar adicionar o aluno. Erro: {ex.Message}");
+            }     
         }
 
         [HttpPut("{Id}")]
-        public string Put(int Id, Aluno aluno)
+        public async Task<IActionResult> Put(int id, Aluno model)
         {
-            context.SaveChanges();
-            return "value";
+            try
+            {
+                var aluno = await _alunoService.Update(id, model);
+                if(aluno == null) return BadRequest("Erro ao tentar adicionar aluno.");
+                return Ok(aluno);
+            }
+            catch (Exception ex)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, $"Erro ao tentar atualizar o aluno. Erro: {ex.Message}");
+            }     
         }
 
         [HttpDelete("{Id}")]
-        public string Delete(int Id)
+        public async Task<IActionResult> Delete(int id)
         {
-            return "value";
+            try
+            {
+                return await _alunoService.Delete(id) ? 
+                            Ok("Deletado") : 
+                            BadRequest("Aluno não deletado.");
+            }
+            catch (Exception ex)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, $"Erro ao tentar deletar o aluno. Erro: {ex.Message}");
+            }     
         }
 
     }

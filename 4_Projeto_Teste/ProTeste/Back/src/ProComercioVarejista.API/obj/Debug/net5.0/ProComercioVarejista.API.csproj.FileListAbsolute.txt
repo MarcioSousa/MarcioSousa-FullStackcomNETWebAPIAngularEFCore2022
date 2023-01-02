@@ -5,7 +5,6 @@ C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Tes
 C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Teste\ProTeste\Back\src\ProComercioVarejista.API\bin\Debug\net5.0\ProComercioVarejista.API.runtimeconfig.json
 C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Teste\ProTeste\Back\src\ProComercioVarejista.API\bin\Debug\net5.0\ProComercioVarejista.API.runtimeconfig.dev.json
 C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Teste\ProTeste\Back\src\ProComercioVarejista.API\bin\Debug\net5.0\ProComercioVarejista.API.dll
-C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Teste\ProTeste\Back\src\ProComercioVarejista.API\bin\Debug\net5.0\ref\ProComercioVarejista.API.dll
 C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Teste\ProTeste\Back\src\ProComercioVarejista.API\bin\Debug\net5.0\ProComercioVarejista.API.pdb
 C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Teste\ProTeste\Back\src\ProComercioVarejista.API\bin\Debug\net5.0\Microsoft.OpenApi.dll
 C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Teste\ProTeste\Back\src\ProComercioVarejista.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
@@ -19,7 +18,6 @@ C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Tes
 C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Teste\ProTeste\Back\src\ProComercioVarejista.API\obj\Debug\net5.0\ProComercioVarejista.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Teste\ProTeste\Back\src\ProComercioVarejista.API\obj\Debug\net5.0\ProComercioVarejista.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Teste\ProTeste\Back\src\ProComercioVarejista.API\obj\Debug\net5.0\staticwebassets\ProComercioVarejista.API.StaticWebAssets.Manifest.cache
-C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Teste\ProTeste\Back\src\ProComercioVarejista.API\obj\Debug\net5.0\staticwebassets\ProComercioVarejista.API.StaticWebAssets.xml
 C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Teste\ProTeste\Back\src\ProComercioVarejista.API\obj\Debug\net5.0\scopedcss\bundle\ProComercioVarejista.API.styles.css
 C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Teste\ProTeste\Back\src\ProComercioVarejista.API\obj\Debug\net5.0\ProComercioVarejista.API.RazorTargetAssemblyInfo.cache
 C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Teste\ProTeste\Back\src\ProComercioVarejista.API\obj\Debug\net5.0\ProComercioVarejista.API.csproj.CopyComplete
@@ -27,3 +25,10 @@ C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Tes
 C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Teste\ProTeste\Back\src\ProComercioVarejista.API\obj\Debug\net5.0\ref\ProComercioVarejista.API.dll
 C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Teste\ProTeste\Back\src\ProComercioVarejista.API\obj\Debug\net5.0\ProComercioVarejista.API.pdb
 C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Teste\ProTeste\Back\src\ProComercioVarejista.API\obj\Debug\net5.0\ProComercioVarejista.API.genruntimeconfig.cache
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Teste\ProTeste\Back\src\ProComercioVarejista.API\bin\Debug\net5.0\ProComercioVarejista.API.StaticWebAssets.xml
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Teste\ProTeste\Back\src\ProComercioVarejista.API\obj\Debug\net5.0\staticwebassets\ProComercioVarejista.API.StaticWebAssets.Pack.cache
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Teste\ProTeste\Back\src\ProComercioVarejista.API\obj\Debug\net5.0\staticwebassets\msbuild.ProComercioVarejista.API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Teste\ProTeste\Back\src\ProComercioVarejista.API\obj\Debug\net5.0\staticwebassets\msbuild.build.ProComercioVarejista.API.props
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Teste\ProTeste\Back\src\ProComercioVarejista.API\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.ProComercioVarejista.API.props
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Teste\ProTeste\Back\src\ProComercioVarejista.API\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.ProComercioVarejista.API.props
+C:\Users\Marcio\Documents\FullStackcom.NETWebAPIeAngularEFCore2022\4_Projeto_Teste\ProTeste\Back\src\ProComercioVarejista.API\obj\Debug\net5.0\refint\ProComercioVarejista.API.dll
