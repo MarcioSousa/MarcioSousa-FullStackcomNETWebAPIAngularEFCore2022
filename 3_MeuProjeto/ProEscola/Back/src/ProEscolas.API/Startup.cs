@@ -6,16 +6,11 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using ProEscolas.Application;
-using ProEscolas.Application.Services;
-using ProEscolas.Persistence;
-using ProEscolas.Persistence.Interfaces;
 
 namespace ProEscolas.API
 {
@@ -31,25 +26,8 @@ namespace ProEscolas.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string mySqlConnection = Configuration.GetConnectionString("MySql");
-            services.AddDbContextPool<ProEscolasContext>(option =>
-                option.UseMySql(mySqlConnection,
-                ServerVersion.AutoDetect(mySqlConnection)));
 
-
-            //services.AddControllers();
-
-            //Resolvendo erro de ciclo utilizando NewtonsoftJson da microsoft
-            services.AddControllers()
-                .AddNewtonsoftJson(option => 
-                    option.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
-            
-            services.AddScoped<IAlunoService, AlunoService>();
-            services.AddScoped<IGeralPersistence, GeralPersistence>();
-            services.AddScoped<IAlunoPersistence, AlunoPersistence>();
-
-            services.AddCors();
-            
+            services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProEscolas.API", Version = "v1" });
@@ -72,10 +50,6 @@ namespace ProEscolas.API
 
             app.UseAuthorization();
 
-            app.UseCors(x => x.AllowAnyHeader()
-                              .AllowAnyMethod()
-                              .AllowAnyOrigin());
-            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
