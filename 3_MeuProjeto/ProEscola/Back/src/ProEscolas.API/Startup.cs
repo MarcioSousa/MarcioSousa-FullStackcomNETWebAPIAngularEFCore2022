@@ -33,6 +33,7 @@ namespace ProEscolas.API
             );
 
             services.AddControllers();
+            services.AddCors();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProEscolas.API", Version = "v1" });
@@ -55,10 +56,16 @@ namespace ProEscolas.API
 
             app.UseAuthorization();
 
+            app.UseCors(x => x.AllowAnyHeader()
+                              .AllowAnyMethod()
+                              .AllowAnyOrigin());
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
         }
+
+        
     }
 }
