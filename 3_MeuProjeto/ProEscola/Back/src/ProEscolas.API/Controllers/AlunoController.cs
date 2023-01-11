@@ -11,7 +11,7 @@ namespace ProEscolas.API.Controllers
     {
         private static IEnumerable<Aluno> _alunos = new Aluno[] {
             new Aluno(){
-                Id = 1,
+                AlunoId = 1,
                 DataNasc = "01/09/2000",
                 Endereco = "Rua AA",
                 Numero = 17,
@@ -28,7 +28,7 @@ namespace ProEscolas.API.Controllers
                 Escolaridade = "Ensino Médio"
             },
             new Aluno(){
-                Id = 2,
+                AlunoId = 2,
                 DataNasc = "01/01/1990",
                 Endereco = "Rua M",
                 Numero = 15,
@@ -55,7 +55,7 @@ namespace ProEscolas.API.Controllers
         [HttpGet("{id}")]
         public IEnumerable<Aluno> Get(int id)
         {
-            return _alunos.Where(aluno => aluno.Id == id);   
+            return _alunos.Where(aluno => aluno.AlunoId == id);   
         }
         
         [HttpGet("Nome/{nome}")]

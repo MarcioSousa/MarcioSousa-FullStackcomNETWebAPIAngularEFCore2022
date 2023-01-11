@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3I50xd4s0U7Hpk2OzTt7FFWJk/DtKl/3yhAK3zDhKGxFMwoVZoKFVV/v4p5VtDS5BJ86uf7pL7bPAgkF1/OK/g==",
+  "dgSpecHash": "/20j4dPZxGLq0zSbKRhxsnrMMJKXn85BiBBikpuQnYcEhAZboStwDDI8UJ4WOUFKnlxhCKhuvHbcNLCWbkP2Mg==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Marcio\\Documents\\FullStackcom.NETWebAPIeAngularEFCore2022\\3_MeuProjeto\\ProEscola\\Back\\src\\ProEscolas.API\\ProEscolas.API.csproj",
+  "projectFilePath": "C:\\Users\\Marcio\\Documents\\FullStackcom.NETWebAPIeAngularEFCore2022\\3_MeuProjeto\\ProEscola\\Back\\src\\ProEscolas.API\\ProEscolas.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Marcio\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Marcio\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

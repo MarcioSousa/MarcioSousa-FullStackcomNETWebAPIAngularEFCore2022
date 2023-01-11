@@ -4,7 +4,7 @@ namespace ProEscolas.API.Models
 {
     public class Aluno
     {
-        public int Id { get; set; }
+        public int AlunoId { get; set; }
         public string Cpf { get; set; }
         public string Nome { get; set; }
         public string DataNasc { get; set; }
@@ -34,7 +34,7 @@ namespace ProEscolas.API.Models
             
             Aluno aluno1 = new("123.456.789-22", "João")
             {
-                Id = 1,
+                AlunoId = 1,
                 DataNasc = "01/09/2000",
                 Endereco = "Rua AA",
                 Numero = 17,
@@ -52,7 +52,7 @@ namespace ProEscolas.API.Models
             };
             Aluno aluno2 = new("012.645.201-77", "Marcio")
             {
-                Id = 2,
+                AlunoId = 2,
                 DataNasc = "01/01/1990",
                 Endereco = "Rua M",
                 Numero = 15,

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Marcio\\Documents\\FullStackcom.NETWebAPIeAngularEFCore2022\\3_MeuProjeto\\ProEscola\\Back\\src\\ProEscolas.API\\ProEscolas.API.csproj": {}
+    "C:\\Users\\Marcio\\Documents\\FullStackcom.NETWebAPIeAngularEFCore2022\\3_MeuProjeto\\ProEscola\\Back\\src\\ProEscolas.API\\ProEscolas.API.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Marcio\\Documents\\FullStackcom.NETWebAPIeAngularEFCore2022\\3_MeuProjeto\\ProEscola\\Back\\src\\ProEscolas.API\\ProEscolas.API.csproj": {
+    "C:\\Users\\Marcio\\Documents\\FullStackcom.NETWebAPIeAngularEFCore2022\\3_MeuProjeto\\ProEscola\\Back\\src\\ProEscolas.API\\ProEscolas.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Marcio\\Documents\\FullStackcom.NETWebAPIeAngularEFCore2022\\3_MeuProjeto\\ProEscola\\Back\\src\\ProEscolas.API\\ProEscolas.API.csproj",
+        "projectUniqueName": "C:\\Users\\Marcio\\Documents\\FullStackcom.NETWebAPIeAngularEFCore2022\\3_MeuProjeto\\ProEscola\\Back\\src\\ProEscolas.API\\ProEscolas.API.csproj",
         "projectName": "ProEscolas.API",
-        "projectPath": "c:\\Users\\Marcio\\Documents\\FullStackcom.NETWebAPIeAngularEFCore2022\\3_MeuProjeto\\ProEscola\\Back\\src\\ProEscolas.API\\ProEscolas.API.csproj",
+        "projectPath": "C:\\Users\\Marcio\\Documents\\FullStackcom.NETWebAPIeAngularEFCore2022\\3_MeuProjeto\\ProEscola\\Back\\src\\ProEscolas.API\\ProEscolas.API.csproj",
         "packagesPath": "C:\\Users\\Marcio\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Marcio\\Documents\\FullStackcom.NETWebAPIeAngularEFCore2022\\3_MeuProjeto\\ProEscola\\Back\\src\\ProEscolas.API\\obj\\",
+        "outputPath": "C:\\Users\\Marcio\\Documents\\FullStackcom.NETWebAPIeAngularEFCore2022\\3_MeuProjeto\\ProEscola\\Back\\src\\ProEscolas.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Marcio\\AppData\\Roaming\\NuGet\\NuGet.Config"
