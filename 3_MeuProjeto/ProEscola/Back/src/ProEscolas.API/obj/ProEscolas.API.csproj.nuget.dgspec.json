@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Marcio\\Documents\\FullStackcom.NETWebAPIeAngularEFCore2022\\3_MeuProjeto\\ProEscola\\Back\\src\\ProEscolas.API\\ProEscolas.API.csproj": {}
+    "c:\\Users\\Marcio\\Documents\\FullStackcom.NETWebAPIeAngularEFCore2022\\3_MeuProjeto\\ProEscola\\Back\\src\\ProEscolas.API\\ProEscolas.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Marcio\\Documents\\FullStackcom.NETWebAPIeAngularEFCore2022\\3_MeuProjeto\\ProEscola\\Back\\src\\ProEscolas.API\\ProEscolas.API.csproj": {
+    "c:\\Users\\Marcio\\Documents\\FullStackcom.NETWebAPIeAngularEFCore2022\\3_MeuProjeto\\ProEscola\\Back\\src\\ProEscolas.API\\ProEscolas.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Marcio\\Documents\\FullStackcom.NETWebAPIeAngularEFCore2022\\3_MeuProjeto\\ProEscola\\Back\\src\\ProEscolas.API\\ProEscolas.API.csproj",
+        "projectUniqueName": "c:\\Users\\Marcio\\Documents\\FullStackcom.NETWebAPIeAngularEFCore2022\\3_MeuProjeto\\ProEscola\\Back\\src\\ProEscolas.API\\ProEscolas.API.csproj",
         "projectName": "ProEscolas.API",
-        "projectPath": "C:\\Users\\Marcio\\Documents\\FullStackcom.NETWebAPIeAngularEFCore2022\\3_MeuProjeto\\ProEscola\\Back\\src\\ProEscolas.API\\ProEscolas.API.csproj",
+        "projectPath": "c:\\Users\\Marcio\\Documents\\FullStackcom.NETWebAPIeAngularEFCore2022\\3_MeuProjeto\\ProEscola\\Back\\src\\ProEscolas.API\\ProEscolas.API.csproj",
         "packagesPath": "C:\\Users\\Marcio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Marcio\\Documents\\FullStackcom.NETWebAPIeAngularEFCore2022\\3_MeuProjeto\\ProEscola\\Back\\src\\ProEscolas.API\\obj\\",
+        "outputPath": "c:\\Users\\Marcio\\Documents\\FullStackcom.NETWebAPIeAngularEFCore2022\\3_MeuProjeto\\ProEscola\\Back\\src\\ProEscolas.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Marcio\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,9 +38,17 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[5.0.17, )"
             },
@@ -49,10 +57,6 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.17, )"
-            },
-            "Pomelo.EntityFrameworkCore.MySql": {
-              "target": "Package",
-              "version": "[5.0.4, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
