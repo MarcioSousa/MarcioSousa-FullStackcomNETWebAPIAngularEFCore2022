@@ -7,7 +7,7 @@ namespace ProEscolas.API.Models
         public int AlunoId { get; set; }
         public string Cpf { get; set; }
         public string Nome { get; set; }
-        public string DataNasc { get; set; }
+        /*public string DataNasc { get; set; }
         public string Endereco { get; set; }
         public int Numero { get; set; }
         public string Bairro { get; set; }
@@ -21,14 +21,19 @@ namespace ProEscolas.API.Models
         public string Rg { get; set; }
         public string Email { get; set; }
         public string Escolaridade { get; set; }
-        public Aluno(string cpf, string nome)
-        {
-            this.Cpf = cpf;
-            this.Nome = nome;
-        }
-        public Aluno(){ }
+        */
+       
+    }
+}
 
-        public List<Aluno> listarAlunos()
+ //public Aluno(string cpf, string nome)
+        //{
+            //this.Cpf = cpf;
+            //this.Nome = nome;
+       // }
+        //public Aluno(){ }
+
+        /*public List<Aluno> listarAlunos()
         {
             List<Aluno> alunos = new List<Aluno>();
             
@@ -73,7 +78,4 @@ namespace ProEscolas.API.Models
             alunos.Add(aluno2);
 
             return alunos;
-        }
-
-    }
-}
+        }*/

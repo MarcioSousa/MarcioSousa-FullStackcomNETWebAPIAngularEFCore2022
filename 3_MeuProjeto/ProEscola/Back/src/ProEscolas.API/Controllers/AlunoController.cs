@@ -1,6 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ProEscolas.API.Data;
 using ProEscolas.API.Models;
 
@@ -39,64 +42,30 @@ namespace ProEscolas.API.Controllers
         [HttpPost]
         public string Post(Aluno model)
         {
-            //Aluno aluno = new Aluno();
-            //List<Aluno> alunos = new List<Aluno>();
-            //alunos.AddRange(aluno.listarAlunos());
-            //alunos.Add(model);
-            return "Foi inserido com sucesso!";
+            _context.Alunos.Add(model);
+            _context.SaveChanges();
+            return "Cadastrado com sucesso!";
         }
 
-        [HttpPut("{Id}")]
-        public string Put(int id, Aluno model)
+        [HttpPut("{alunoId}")]
+        public string Put(Aluno model)
         {
-            return "teste";
+            _context.Entry(model).State = EntityState.Modified;
+            _context.SaveChanges();
+            return "Atualizado com Sucesso!";
         }
 
-        [HttpDelete("{Id}")]
-        public string Delete(int id)
+        [HttpDelete("{alunoId}")]
+        public string Delete(int alunoId)
         {
-            return "teste";
+            Aluno aluno =  _context.Alunos.Find(alunoId);
+            _context.Alunos.Remove(aluno);
+            _context.SaveChanges();
+            return "Removido com Sucesso!";
         }
 
     }
 
 }
 
-
-        /*private static IEnumerable<Aluno> _alunos = new Aluno[] {
-            new Aluno(){
-                AlunoId = 1,
-                DataNasc = "01/09/2000",
-                Endereco = "Rua AA",
-                Numero = 17,
-                Bairro = "Centro",
-                Cidade = "Itu",
-                Estado = "SP",
-                Cep = "11222-111",
-                Telefone = "5555511111",
-                Celular = "11922211111",
-                Sexo = "M",
-                EstadoCivil = "Casado",
-                Rg = "11.111.222-22",
-                Email = "teste2@teste.com",
-                Escolaridade = "Ensino Médio"
-            },
-            new Aluno(){
-                AlunoId = 2,
-                DataNasc = "01/01/1990",
-                Endereco = "Rua M",
-                Numero = 15,
-                Bairro = "Centro",
-                Cidade = "Itu",
-                Estado = "RJ",
-                Cep = "31111-111",
-                Telefone = "3311111111",
-                Celular = "33911111111",
-                Sexo = "M",
-                EstadoCivil = "Solteiro",
-                Rg = "33.111.111-11",
-                Email = "teste3@teste.com",
-                Escolaridade = "Ensino Superior"
-            }
-        };
-        */
+      
