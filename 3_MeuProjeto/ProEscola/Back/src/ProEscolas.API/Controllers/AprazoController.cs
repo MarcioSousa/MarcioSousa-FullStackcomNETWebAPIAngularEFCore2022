@@ -9,61 +9,51 @@ namespace ProEscolas.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class AlunoController : ControllerBase
+    public class AprazoController
     {
         private readonly DataContext _context;
 
-        public AlunoController(DataContext context)
+        public AprazoController(DataContext context)
         {
             _context = context;
         }
 
         [HttpGet]
-        public IEnumerable<Aluno> Get()
+        public IEnumerable<Aprazo> Get()
         {
-            return _context.Alunos;
+            return _context.Aprazos;
         }
 
         [HttpGet("{id}")]
-        public Aluno Get(int id)
+        public Aprazo Get(int id)
         {
             //Retornar somente Aluno para retirar o sinal de colchetes
-            return _context.Alunos.FirstOrDefault(aluno => aluno.Id== id);
-        }
-
-        [HttpGet("Nome/{nome}")]
-        public IEnumerable<Aluno> Get(string nome)
-        {
-            return _context.Alunos.Where(e => e.Nome.ToLower().Contains(nome.ToLower()));
+            return _context.Aprazos.FirstOrDefault(Aprazo => Aprazo.Id== id);
         }
 
         [HttpPost]
-        public string Post(Aluno model)
+        public string Post(Aprazo model)
         {
-            _context.Alunos.Add(model);
+            _context.Aprazos.Add(model);
             _context.SaveChanges();
             return "Cadastrado com sucesso!";
         }
 
-        [HttpPut("{alunoId}")]
-        public string Put(Aluno model)
+        [HttpPut("{aprazoId}")]
+        public string Put(Aprazo model)
         {
             _context.Entry(model).State = EntityState.Modified;
             _context.SaveChanges();
             return "Atualizado com Sucesso!";
         }
 
-        [HttpDelete("{alunoId}")]
-        public string Delete(int alunoId)
+        [HttpDelete("{aprazoId}")]
+        public string Delete(int aprazoId)
         {
-            Aluno aluno =  _context.Alunos.Find(alunoId);
-            _context.Alunos.Remove(aluno);
+            Aprazo aprazo =  _context.Aprazos.Find(aprazoId);
+            _context.Aprazos.Remove(aprazo);
             _context.SaveChanges();
             return "Removido com Sucesso!";
         }
-
     }
-
 }
-
-      

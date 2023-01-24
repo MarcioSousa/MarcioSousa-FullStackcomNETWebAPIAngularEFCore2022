@@ -9,61 +9,58 @@ namespace ProEscolas.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class AlunoController : ControllerBase
+    public class MatriculaController : ControllerBase
     {
         private readonly DataContext _context;
 
-        public AlunoController(DataContext context)
+        public MatriculaController(DataContext context)
         {
             _context = context;
         }
 
         [HttpGet]
-        public IEnumerable<Aluno> Get()
+        public IEnumerable<Matricula> Get()
         {
-            return _context.Alunos;
+            return _context.Matriculas;
         }
 
         [HttpGet("{id}")]
-        public Aluno Get(int id)
+        public Matricula Get(int id)
         {
             //Retornar somente Aluno para retirar o sinal de colchetes
-            return _context.Alunos.FirstOrDefault(aluno => aluno.Id== id);
+            return _context.Matriculas.FirstOrDefault(Instrutor => Instrutor.Id== id);
         }
 
-        [HttpGet("Nome/{nome}")]
-        public IEnumerable<Aluno> Get(string nome)
-        {
-            return _context.Alunos.Where(e => e.Nome.ToLower().Contains(nome.ToLower()));
-        }
-
+        //[HttpGet("Nome/{nome}")]
+        //public IEnumerable<Matricula> Get(string nome)
+        //{
+        //    return _context.Instrutores.Where(e => e.Nome.ToLower().Contains(nome.ToLower()));
+        //}
+        
         [HttpPost]
-        public string Post(Aluno model)
+        public string Post(Matricula model)
         {
-            _context.Alunos.Add(model);
+            _context.Matriculas.Add(model);
             _context.SaveChanges();
             return "Cadastrado com sucesso!";
         }
 
-        [HttpPut("{alunoId}")]
-        public string Put(Aluno model)
+        [HttpPut("{matriculaId}")]
+        public string Put(Matricula model)
         {
             _context.Entry(model).State = EntityState.Modified;
             _context.SaveChanges();
             return "Atualizado com Sucesso!";
         }
 
-        [HttpDelete("{alunoId}")]
-        public string Delete(int alunoId)
+        [HttpDelete("{matriculaId}")]
+        public string Delete(int matriculaId)
         {
-            Aluno aluno =  _context.Alunos.Find(alunoId);
-            _context.Alunos.Remove(aluno);
+            Matricula matricula =  _context.Matriculas.Find(matriculaId);
+            _context.Matriculas.Remove(matricula);
             _context.SaveChanges();
             return "Removido com Sucesso!";
         }
 
     }
-
 }
-
-      

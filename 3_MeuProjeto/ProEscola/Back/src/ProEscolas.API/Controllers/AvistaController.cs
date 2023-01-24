@@ -9,61 +9,51 @@ namespace ProEscolas.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class AlunoController : ControllerBase
+    public class AvistaController
     {
         private readonly DataContext _context;
 
-        public AlunoController(DataContext context)
+        public AvistaController(DataContext context)
         {
             _context = context;
         }
 
         [HttpGet]
-        public IEnumerable<Aluno> Get()
+        public IEnumerable<Avista> Get()
         {
-            return _context.Alunos;
+            return _context.Avistas;
         }
 
         [HttpGet("{id}")]
-        public Aluno Get(int id)
+        public Avista Get(int id)
         {
             //Retornar somente Aluno para retirar o sinal de colchetes
-            return _context.Alunos.FirstOrDefault(aluno => aluno.Id== id);
-        }
-
-        [HttpGet("Nome/{nome}")]
-        public IEnumerable<Aluno> Get(string nome)
-        {
-            return _context.Alunos.Where(e => e.Nome.ToLower().Contains(nome.ToLower()));
+            return _context.Avistas.FirstOrDefault(Avista => Avista.Id== id);
         }
 
         [HttpPost]
-        public string Post(Aluno model)
+        public string Post(Avista model)
         {
-            _context.Alunos.Add(model);
+            _context.Avistas.Add(model);
             _context.SaveChanges();
             return "Cadastrado com sucesso!";
         }
 
-        [HttpPut("{alunoId}")]
-        public string Put(Aluno model)
+        [HttpPut("{avistaId}")]
+        public string Put(Avista model)
         {
             _context.Entry(model).State = EntityState.Modified;
             _context.SaveChanges();
             return "Atualizado com Sucesso!";
         }
 
-        [HttpDelete("{alunoId}")]
-        public string Delete(int alunoId)
+        [HttpDelete("{avistaId}")]
+        public string Delete(int avistaId)
         {
-            Aluno aluno =  _context.Alunos.Find(alunoId);
-            _context.Alunos.Remove(aluno);
+            Avista avista = _context.Avistas.Find(avistaId);
+            _context.Avistas.Remove(avista);
             _context.SaveChanges();
             return "Removido com Sucesso!";
         }
-
     }
-
 }
-
-      

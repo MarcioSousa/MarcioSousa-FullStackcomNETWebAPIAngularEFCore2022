@@ -9,61 +9,58 @@ namespace ProEscolas.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class AlunoController : ControllerBase
+    public class InstrutorController : ControllerBase
     {
         private readonly DataContext _context;
 
-        public AlunoController(DataContext context)
+        public InstrutorController(DataContext context)
         {
             _context = context;
         }
 
         [HttpGet]
-        public IEnumerable<Aluno> Get()
+        public IEnumerable<Instrutor> Get()
         {
-            return _context.Alunos;
+            return _context.Instrutores;
         }
 
         [HttpGet("{id}")]
-        public Aluno Get(int id)
+        public Instrutor Get(int id)
         {
             //Retornar somente Aluno para retirar o sinal de colchetes
-            return _context.Alunos.FirstOrDefault(aluno => aluno.Id== id);
+            return _context.Instrutores.FirstOrDefault(Instrutor => Instrutor.Id== id);
         }
 
         [HttpGet("Nome/{nome}")]
-        public IEnumerable<Aluno> Get(string nome)
+        public IEnumerable<Instrutor> Get(string nome)
         {
-            return _context.Alunos.Where(e => e.Nome.ToLower().Contains(nome.ToLower()));
+            return _context.Instrutores.Where(e => e.Nome.ToLower().Contains(nome.ToLower()));
         }
 
         [HttpPost]
-        public string Post(Aluno model)
+        public string Post(Instrutor model)
         {
-            _context.Alunos.Add(model);
+            _context.Instrutores.Add(model);
             _context.SaveChanges();
             return "Cadastrado com sucesso!";
         }
 
-        [HttpPut("{alunoId}")]
-        public string Put(Aluno model)
+        [HttpPut("{instrutorId}")]
+        public string Put(Instrutor model)
         {
             _context.Entry(model).State = EntityState.Modified;
             _context.SaveChanges();
             return "Atualizado com Sucesso!";
         }
 
-        [HttpDelete("{alunoId}")]
-        public string Delete(int alunoId)
+        [HttpDelete("{instrutorId}")]
+        public string Delete(int instrutorId)
         {
-            Aluno aluno =  _context.Alunos.Find(alunoId);
-            _context.Alunos.Remove(aluno);
+            Instrutor instrutor =  _context.Instrutores.Find(instrutorId);
+            _context.Instrutores.Remove(instrutor);
             _context.SaveChanges();
             return "Removido com Sucesso!";
         }
 
     }
-
 }
-
-      
