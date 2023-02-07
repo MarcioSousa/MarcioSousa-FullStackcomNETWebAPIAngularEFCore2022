@@ -21,7 +21,9 @@ namespace ProEscolas.API.Controllers
         [HttpGet]
         public IEnumerable<Turma> Get()
         {
-            return _context.Turmas;
+            return _context.Turmas
+                .Include(t => t.Matriculas)
+                .OrderBy(t => t.Id);
         }
 
         [HttpGet("{id}")]

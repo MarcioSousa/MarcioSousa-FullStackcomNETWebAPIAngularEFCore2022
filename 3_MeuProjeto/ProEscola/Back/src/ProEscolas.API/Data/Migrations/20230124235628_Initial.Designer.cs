@@ -9,7 +9,7 @@ using ProEscolas.API.Data;
 namespace ProEscolas.API.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230124202936_Initial")]
+    [Migration("20230124235628_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

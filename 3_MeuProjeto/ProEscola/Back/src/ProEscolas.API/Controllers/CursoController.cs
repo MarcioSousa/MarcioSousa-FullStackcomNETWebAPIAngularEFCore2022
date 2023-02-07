@@ -21,7 +21,8 @@ namespace ProEscolas.API.Controllers
         [HttpGet]
         public IEnumerable<Curso> Get()
         {
-            return _context.Cursos;
+            return _context.Cursos
+                .Include(c => c.Turmas);
         }
 
         [HttpGet("{id}")]
